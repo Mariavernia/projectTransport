@@ -27,9 +27,6 @@ public class Customer {
 	}
 
 
-	
-
-	
 	public String getCustomerID() {
 		return this.customerID;
 	}
