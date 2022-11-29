@@ -1,6 +1,8 @@
 package logisticsIndra;
 
 public class Package {
+
+
 	public String id;
 	public Boolean isFragile;
 	public int height;
@@ -8,9 +10,17 @@ public class Package {
 	public int depth;
 	public Sizes size;
 	
-	public Package(String id) {
+	public Package(String id, Boolean isFragile, int height, int width, int depth, Sizes size) {
+		super();
 		this.id = id;
-	}	
+		this.isFragile = isFragile;
+		this.height = height;
+		this.width = width;
+		this.depth = depth;
+		this.size = size;
+	}
+	
+		
 	
 	public String getId() {
 		return id;

@@ -6,7 +6,7 @@ public class Address {
 	public String country;
 	public String province;
 	public String city;
-	int zipCode;
+	public int zipCode;
 	
 	public Address(String address, String country, String province, String city, int zipCode) {
 		super();
