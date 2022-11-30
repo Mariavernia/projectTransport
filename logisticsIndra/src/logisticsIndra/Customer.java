@@ -2,37 +2,31 @@ package logisticsIndra;
 
 public class Customer {
 	
-	public String customerID;
+	public String id_customer;
 	public String name;
+	public String surname;
 	public String email;
 	public String phoneNumber;
-	public String address;
-	public String country;
-	public String province;
-	public String city;
-	public String zipCode;
+	public String idCard;
+	public Address address;
 	
-	public Customer(String customerID, String name, String email, String phoneNumber, String address, String country,
-			String province, String city, String zipCode) {
+	public Customer(String id_customer, String name, String surname, String email, String phoneNumber,String idCard, Address address) {
 		super();
-		this.customerID = customerID;
+		this.id_customer = id_customer;
 		this.name = name;
+		this.surname = surname;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
+		this.idCard = idCard;
 		this.address = address;
-		this.country = country;
-		this.province = province;
-		this.city = city;
-		this.zipCode = zipCode;
 	}
 
-
-	public String getCustomerID() {
-		return this.customerID;
+	public String getId_customer() {
+		return id_customer;
 	}
-	
-	public void setCustomerID(String customerID) {
-		this.customerID = customerID;		
+
+	public void setId_customer(String id_customer) {
+		this.id_customer = id_customer;
 	}
 
 	public String getName() {
@@ -41,6 +35,14 @@ public class Customer {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getSurname() {
+		return surname;
+	}
+
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 
 	public String getEmail() {
@@ -59,43 +61,28 @@ public class Customer {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public String getAddress() {
+	public String getIdCard() {
+		return idCard;
+	}
+
+	public void setIdCard(String idCard) {
+		this.idCard = idCard;
+	}
+
+	public Address getAddress() {
 		return address;
 	}
 
-	public void setAddress(String address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 
-	public String getCountry() {
-		return country;
+	@Override
+	public String toString() {
+		return "Customer [id_customer=" + id_customer + ", name=" + name + ", surname=" + surname + ", email=" + email
+				+ ", phoneNumber=" + phoneNumber + ", idCard=" + idCard + ", address="
+				+ address + "]";
 	}
 
-	public void setCountry(String country) {
-		this.country = country;
-	}
-
-	public String getProvince() {
-		return province;
-	}
-
-	public void setProvince(String province) {
-		this.province = province;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getZipCode() {
-		return zipCode;
-	}
-
-	public void setZipCode(String zipCode) {
-		this.zipCode = zipCode;
-	}
 }
+	
