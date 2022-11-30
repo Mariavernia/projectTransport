@@ -1,24 +1,29 @@
 package logisticsIndra;
 
+import java.util.ArrayList;
+
 public class Customer {
 	
 	public String id_customer;
 	public String name;
-	public String surname;
+	public String familyName;
 	public String email;
 	public String phoneNumber;
 	public String idCard;
 	public Address address;
+	public ArrayList<Order> order;
 	
-	public Customer(String id_customer, String name, String surname, String email, String phoneNumber,String idCard, Address address) {
+	public Customer(String id_customer, String name, String familyName, String email, String phoneNumber, String idCard,
+			Address address, ArrayList<Order> order) {
 		super();
 		this.id_customer = id_customer;
 		this.name = name;
-		this.surname = surname;
+		this.familyName = familyName;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.idCard = idCard;
 		this.address = address;
+		this.order = order;
 	}
 
 	public String getId_customer() {
@@ -37,12 +42,12 @@ public class Customer {
 		this.name = name;
 	}
 
-	public String getSurname() {
-		return surname;
+	public String getFamilyName() {
+		return familyName;
 	}
 
-	public void setSurname(String surname) {
-		this.surname = surname;
+	public void setFamilyName(String familyName) {
+		this.familyName = familyName;
 	}
 
 	public String getEmail() {
@@ -77,12 +82,23 @@ public class Customer {
 		this.address = address;
 	}
 
+	public ArrayList<Order> getOrder() {
+		return order;
+	}
+
+	public void setOrder(ArrayList<Order> order) {
+		this.order = order;
+	}
+
 	@Override
 	public String toString() {
-		return "Customer [id_customer=" + id_customer + ", name=" + name + ", surname=" + surname + ", email=" + email
-				+ ", phoneNumber=" + phoneNumber + ", idCard=" + idCard + ", address="
-				+ address + "]";
+		return "Customer [id_customer=" + id_customer + ", name=" + name + ", familyName=" + familyName + ", email="
+				+ email + ", phoneNumber=" + phoneNumber + ", idCard=" + idCard + ", address=" + address + ", order="
+				+ order + "]";
 	}
+	
+
+
 
 }
 	
