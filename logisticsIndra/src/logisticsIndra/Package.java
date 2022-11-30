@@ -10,14 +10,15 @@ public class Package {
 	public int depth;
 	public Sizes size;
 	
-	public Package(String id, Boolean isFragile, int height, int width, int depth, Sizes size) {
+
+	public Package(String id, Boolean isFragile, int height, int width, int depth) {
 		super();
 		this.id = id;
 		this.isFragile = isFragile;
 		this.height = height;
 		this.width = width;
 		this.depth = depth;
-		this.size = size;
+		setSize(height, width, depth);
 	}
 	
 		
